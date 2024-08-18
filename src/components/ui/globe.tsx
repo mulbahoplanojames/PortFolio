@@ -97,7 +97,7 @@ export const Globe: React.FC<WorldProps> = ({ globeConfig, data }) => {
       _buildData();
       _buildMaterial();
     }
-  }, [globeRef.current]);
+  }, [globeRef.current, globeConfig]);
 
   const _buildMaterial = () => {
     if (!globeRef.current) return;
@@ -116,7 +116,7 @@ export const Globe: React.FC<WorldProps> = ({ globeConfig, data }) => {
 
   const _buildData = () => {
     const arcs = data;
-    let points: typeof globeData = [];
+    const points: typeof globeData = [];
     for (let i = 0; i < arcs.length; i++) {
       const arc = arcs[i];
       const rgb = hexToRgb(arc.color) as { r: number; g: number; b: number };
@@ -162,7 +162,14 @@ export const Globe: React.FC<WorldProps> = ({ globeConfig, data }) => {
         });
       startAnimation();
     }
-  }, [globeData]);
+  }, [
+    globeData,
+    globeRef.current,
+    defaultProps.atmosphereAltitude,
+    defaultProps.polygonColor,
+    defaultProps.showAtmosphere,
+    defaultProps.atmosphereColor,
+  ]);
 
   const startAnimation = () => {
     if (!globeRef.current || !globeData) return;
@@ -173,7 +180,7 @@ export const Globe: React.FC<WorldProps> = ({ globeConfig, data }) => {
       .arcStartLng((d) => (d as { startLng: number }).startLng * 1)
       .arcEndLat((d) => (d as { endLat: number }).endLat * 1)
       .arcEndLng((d) => (d as { endLng: number }).endLng * 1)
-      .arcColor((e: any) => (e as { color: string }).color)
+      .arcColor((e: unknown) => (e as { color: string }).color)
       .arcAltitude((e) => {
         return (e as { arcAlt: number }).arcAlt * 1;
       })
@@ -192,7 +199,10 @@ export const Globe: React.FC<WorldProps> = ({ globeConfig, data }) => {
 
     globeRef.current
       .ringsData([])
-      .ringColor((e: any) => (t: any) => e.color(t))
+      .ringColor(
+        (e: unknown) => (t: unknown) =>
+          (e as { color: (t: unknown) => string }).color(t)
+      )
       .ringMaxRadius(defaultProps.maxRings)
       .ringPropagationSpeed(RING_PROPAGATION_SPEED)
       .ringRepeatPeriod(
@@ -212,14 +222,14 @@ export const Globe: React.FC<WorldProps> = ({ globeConfig, data }) => {
       );
 
       globeRef.current.ringsData(
-        globeData.filter((d, i) => numbersOfRings.includes(i))
+        globeData.filter((_d, i) => numbersOfRings.includes(i))
       );
     }, 2000);
 
     return () => {
       clearInterval(interval);
     };
-  }, [globeRef.current, globeData]);
+  }, [globeData, data.length]);
 
   return <threeGlobe ref={globeRef} />;
 };
@@ -272,13 +282,14 @@ export const World: React.FC<WorldProps> = (props) => {
   );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function hexToRgb(hex: string) {
-  var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-  hex = hex.replace(shorthandRegex, (m, r, g, b) => {
+  const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+  hex = hex.replace(shorthandRegex, (_m, r, g, b) => {
     return r + r + g + g + b + b;
   });
 
-  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return result
     ? {
         r: parseInt(result[1], 16),
@@ -288,6 +299,7 @@ export function hexToRgb(hex: string) {
     : null;
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function genRandomNumbers(min: number, max: number, count: number) {
   const arr: number[] = [];
   while (arr.length < count) {
