@@ -68,7 +68,7 @@ export const GlobeDemo = () => {
           <h2 className="text-center text-xl md:text-4xl font-bold text-white">
             Connect with me at any time and Location
           </h2>
-          <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto">
+          <p className="text-center text-base md:text-lg font-normal text-text max-w-md mt-2 mx-auto">
             Explore and interact with this globe—enjoy the experience!
           </p>
         </motion.div>
