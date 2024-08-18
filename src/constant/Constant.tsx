@@ -83,7 +83,7 @@ type ServicesType = {
   icon: string;
 };
 
-const servicesData: ServicesType[] = [
+export const servicesData: ServicesType[] = [
   {
     id: 1,
     title: "Web Development",
