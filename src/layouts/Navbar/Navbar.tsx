@@ -3,15 +3,7 @@ import { TbMenu2 } from "react-icons/tb";
 import { MdOutlineCancelPresentation } from "react-icons/md";
 // import { Link } from "react-router-dom";
 import Navlinks from "../../constant/Constant";
-import {
-  Link,
-  Button,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
+import { Link, Events, animateScroll as scroll, scrollSpy } from "react-scroll";
 
 import logo from "/src/assets/logo.png";
 
@@ -47,10 +39,6 @@ const Navbar = () => {
   // Defining functions to perform different types of scrolling.
   const scrollToTop = () => {
     scroll.scrollToTop();
-  };
-
-  const scrollToBottom = () => {
-    scroll.scrollToBottom();
   };
 
   // Function to handle the activation of a link.
@@ -162,8 +150,13 @@ const Navbar = () => {
         </div>
       )}
 
-      <button className="bg-white w-14 h-14 rounded-full fixed bottom-[3rem] md:right-12 right-6 z-50 flex justify-center items-center">
-        <FaArrowCircleUp />
+      <button
+        className="bg-white w-14 h-14 rounded-full fixed bottom-[3rem] md:right-12 right-6 z-50 flex justify-center items-center cursor-pointer"
+        onClick={() => {
+          scrollToTop();
+        }}
+      >
+        <FaArrowCircleUp className="text-4xl" />
       </button>
     </>
   );
