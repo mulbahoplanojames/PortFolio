@@ -13,8 +13,8 @@ const Navlinks: NavLinksType[] = [
     path: "/about",
   },
   {
-    label: "Technologies",
-    path: "/technologies",
+    label: "Services",
+    path: "/services",
   },
   {
     label: "Blog",

@@ -3,7 +3,10 @@ import { exprtise } from "../../constant/Constant";
 const AboutMe = () => {
   return (
     <>
-      <section className="bg-primary md:px-20 px-2 md:py-12 py-8 grid md:grid-cols-2 grid-cols-1 md:gap-8 gap-14 w-full place-items-center">
+      <section
+        className="bg-primary md:px-20 px-2 md:py-12 py-8 grid md:grid-cols-2 grid-cols-1 md:gap-8 gap-14 w-full place-items-center"
+        id="/about"
+      >
         <div className="w-full ">
           <div className="w-full">
             <h1 className="md:text-4xl text-3xl text-text md:pb-4 pb-2">

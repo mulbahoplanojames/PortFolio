@@ -3,7 +3,10 @@ import { servicesData } from "../../constant/Constant";
 const MyServices = () => {
   return (
     <>
-      <div className="w-full bg-gradient-to-r from-primary to-background md:px-24 px-4 md:py-16 py-12 ">
+      <div
+        className="w-full bg-gradient-to-r from-primary to-background md:px-24 px-4 md:py-16 py-12 "
+        id="/services"
+      >
         <h1 className="md:text-4xl text-3xl text-text pb-8 md:pb-14 text-center">
           My Services
         </h1>

@@ -1,14 +1,62 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { TbMenu2 } from "react-icons/tb";
 import { MdOutlineCancelPresentation } from "react-icons/md";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Navlinks from "../../constant/Constant";
+import {
+  Link,
+  Button,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll";
 
 import logo from "/src/assets/logo.png";
+
+import { FaArrowCircleUp } from "react-icons/fa";
 
 const Navbar = () => {
   // State variable to keep track of whether the menu is open or not.
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    // Registering the 'begin' event and logging it to the console when triggered.
+    const handleBegin = (to: string, element: HTMLElement) => {
+      console.log("begin", to, element);
+    };
+    Events.scrollEvent.register("begin", handleBegin);
+
+    // Registering the 'end' event and logging it to the console when triggered.
+    const handleEnd = (to: string, element: HTMLElement) => {
+      console.log("end", to, element);
+    };
+    Events.scrollEvent.register("end", handleEnd);
+
+    // Updating scrollSpy when the component mounts.
+    scrollSpy.update();
+
+    // Returning a cleanup function to remove the registered events when the component unmounts.
+    return () => {
+      Events.scrollEvent.remove("begin");
+      Events.scrollEvent.remove("end");
+    };
+  }, []);
+
+  // Defining functions to perform different types of scrolling.
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+
+  const scrollToBottom = () => {
+    scroll.scrollToBottom();
+  };
+
+  // Function to handle the activation of a link.
+  const handleSetActive = (to: string) => {
+    console.log(to);
+  };
 
   return (
     <>
@@ -33,6 +81,12 @@ const Navbar = () => {
               <Link
                 to={navlink.path}
                 className={`font-montserrat text-base leading-normal `}
+                activeClass="active"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                onSetActive={handleSetActive}
               >
                 {navlink.label}
               </Link>
@@ -80,12 +134,21 @@ const Navbar = () => {
                     window.scrollTo(0, 8000);
                   }}
                 >
-                  <a
-                    href={navlink.path}
+                  <Link
+                    to={navlink.path}
+                    activeClass="active"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    onSetActive={handleSetActive}
+                    onClick={() => {
+                      setIsMenuOpen(!isMenuOpen);
+                    }}
                     className="font-montserrat active:text-black text-2xl leading-normal text-white"
                   >
                     {navlink.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
               <Link
@@ -98,6 +161,10 @@ const Navbar = () => {
           </nav>
         </div>
       )}
+
+      <button className="bg-white w-14 h-14 rounded-full fixed bottom-[3rem] md:right-12 right-6 z-50 flex justify-center items-center">
+        <FaArrowCircleUp />
+      </button>
     </>
   );
 };
