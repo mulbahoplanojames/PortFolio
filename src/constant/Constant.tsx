@@ -111,7 +111,7 @@ export const servicesData: ServicesType[] = [
 
 //? ------------------------------------------------------------------------------------------------------
 
-import blog1 from "/src/assets/blog7.webp";
+import pythonblog from "/src/assets/python5.png";
 import blog2 from "/src/assets/blog2.webp";
 import blog3 from "/src/assets/blog3.webp";
 import blog4 from "/src/assets/blog4.webp";
@@ -130,21 +130,21 @@ export type BlogType = {
 export const blogData: BlogType[] = [
   {
     id: 1,
-    title: "Web Development",
+    title: "How to Learn Python in 2024: A Comprehensive Guide",
     description:
-      "I build websites that serve as powerful marketing tools and bring memorable brand experiences.",
-    image: blog1,
-    date: "Aug 21, 2022",
-    link: "/",
+      "Python continues to be one of the most popular and versatile programming languages in 2024.",
+    image: pythonblog,
+    date: "Aug 21, 2024",
+    link: "/python-in-2024",
   },
   {
     id: 2,
-    title: "UI/UX Design",
+    title: "Getting Started with JavaScript Functions: A Beginner's Guide",
     description:
-      "Intuitive and visually appealing user interfaces that enhance user experiences.",
+      "Dive into the world of JavaScript functions with this comprehensive beginner's guide. Learn the basics of creating, calling, and utilizing functions to write cleaner, more efficient code.",
     image: blog2,
-    date: "Aug 21, 2022",
-    link: "/",
+    date: "Aug 19, 2024",
+    link: "/javascript-functions",
   },
   {
     id: 3,
