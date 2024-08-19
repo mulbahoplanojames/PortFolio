@@ -32,7 +32,7 @@ const PostOne = () => {
         {htmlTags.map((tag) => {
           return (
             <div className="pt-8 pb-5">
-              <h2 className="text-2xl pb-4 font-bold">
+              <h2 className="md:text-3xl text-2xl pb-4 font-bold">
                 <code>
                   &lt;{tag.tag}&gt; {tag.name} Tag &lt;/{tag.tag}&gt;
                 </code>
@@ -41,6 +41,60 @@ const PostOne = () => {
             </div>
           );
         })}
+
+        <div className="pt-8 pb-5">
+          <h2 className="md:text-3xl text-2xl pb-4 font-bold">
+            How Do Web Pages Read HTML Tags?
+          </h2>
+          <p className="text-lg pb-4">{text4}</p>
+          <p className="text-lg pb-2">An HTML tag must contain three parts:</p>
+
+          <ul className="text-lg list-inside list-decimal ">
+            <li className="pb-3">
+              {" "}
+              An opening tag — this will start with a &lt;&gt; symbol
+            </li>
+            <li className="pb-3">
+              Content — the short instructions on how to display the on-page
+              element
+            </li>
+            <li className="pb-3">
+              {" "}
+              A closing tag — this will end with a &lt;/&gt; symbol
+            </li>
+          </ul>
+          <p className="text-lg">
+            However, some HTML tags can be unclosed. That means that the HTML
+            tag does not need to be closed with a &lt;/&gt;. You’ll typically
+            use unclosed tags for metadata or line breaks.
+          </p>
+        </div>
+
+        <div className="pt-8 pb-5">
+          <h2 className="md:text-3xl text-2xl pb-4 font-bold">
+            What’s the Difference Between Attributes and HTML Tags?
+          </h2>
+          <p className="text-lg pb-4">{text5}</p>
+          <p className="text-lg pb-2">An HTML tag must contain three parts:</p>
+
+          <ul className="text-lg list-inside list-disc ">
+            <li className="pb-3">
+              HTML tags contain instructions on how to display an on-page
+              element. They begin with a &lt; and end with a &gt; and precede
+              and follow the content of the element. (e.g &lt;b&gt; Bold Tag
+              &lt;b&gt;)
+            </li>
+            <li className="pb-3">
+              HTML Elements are the on-page content sandwiched within the tags.
+              (&lt;b&gt; Bold Tag &lt;/b&gt;)
+            </li>
+            <li className="pb-3">
+              HTML Attributes provide additional information about HTML elements
+              and appear at within the HTML tag (e.g. &lt;html
+              lang="en-US"&gt;).
+            </li>
+          </ul>
+        </div>
 
         {/* back to home  */}
         <Link
@@ -147,4 +201,9 @@ const text1 = `Learn the building blocks of web pages! This easy-to-follow guide
 const text2 = `HTML tags are like secret codes that tell your web browser what to do. They help make words bold or italic, add pictures, or create lists. Every webpage uses these tags in its HTML, which is just a fancy way of saying "the language websites use." Think of HTML as the recipe that tells your browser how to cook up a webpage!`;
 
 const text3 = `The <p> and </p> are called HTML tags. The text you put between them is known as a "Paragraph Tag." These tags help format the text as a regular paragraph on your webpage. Using them makes your text easier to read and keeps your content organized. You can use these tags as many times as needed to create multiple paragraphs.`;
+
+const text4 = `Servers read HTML code to understand and display content. They process the HTML from top to bottom, just like you read this guide. You can use as many or as few tags as you want to format your content. However, there are some essential HTML tags and rules that you need to follow.`;
+
+const text5 = `Although this guide is all about HTML tags, it’s important to know the difference between HTML tags, elements, and attributes. An HTML element is an item on the page; it’s part of the web page’s content. An HTML tag affects how an HTML element appears. An HTML attribute describes the characteristics of that element. Here’s a breakdown of how elements, tags, and attributes work together:`;
+
 //? -------------------------------------------------------------------------------------------------
