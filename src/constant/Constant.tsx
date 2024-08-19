@@ -77,21 +77,21 @@ const laptop: string = "/src/assets/laptop-screen.png";
 const diy: string = "/src/assets/diy.png";
 const targeted: string = "/src/assets/targeted.png";
 
-type ServicesType = {
-  id: number;
-  title: string;
-  description: string;
-  icon?: string;
-};
+// type ServicesType = {
+//   id: number;
+//   title: string;
+//   description: string;
+//   icon?: string;
+// };
 
 // eslint-disable-next-line react-refresh/only-export-components
-export const servicesData: ServicesType[] = [
+export const servicesData = [
   {
     id: 1,
     title: "Web Development",
     description:
       "I build websites that serve as powerful marketing tools and bring memorable brand experiences.",
-    icon: "/src/assets/laptop-screen.png",
+    icon: laptop,
   },
   {
     id: 2,
