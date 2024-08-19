@@ -111,7 +111,7 @@ export const servicesData: ServicesType[] = [
 
 //? ------------------------------------------------------------------------------------------------------
 
-import blog1 from "/src/assets/blog1.webp";
+import blog1 from "/src/assets/blog7.webp";
 import blog2 from "/src/assets/blog2.webp";
 import blog3 from "/src/assets/blog3.webp";
 import blog4 from "/src/assets/blog4.webp";

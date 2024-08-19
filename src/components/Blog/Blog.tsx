@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { blogData } from "../../constant/Constant";
 import { Cover } from "../ui/cover";
-import image from "/src/assets/blog7.webp";
+import image from "/src/assets/blog1.webp";
 
 const Blog = () => {
   const [items, setItems] = useState(blogData);
