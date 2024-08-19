@@ -73,9 +73,9 @@ export const exprtise: ExpertiseType[] = [
 
 // =====================================================================================
 
-const laptop: string = "/src/assets/laptop-screen.png";
-const diy: string = "/src/assets/diy.png";
-const targeted: string = "/src/assets/targeted.png";
+import laptop from "/src/assets/laptop-screen.png";
+import diy from "/src/assets/diy.png";
+import targeted from "/src/assets/targeted.png";
 
 type ServicesType = {
   id: number;
