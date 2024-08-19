@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { AiFillHome } from "react-icons/ai";
 import PostHero from "../Post_Hero/PostHero";
 import postImage from "/src/assets/python5.png";
+import PostTwoBody from "./PostTwoBody";
+import postImage1 from "/src/assets/python2.png";
 
 const PostTwo = () => {
   return (
@@ -15,6 +17,11 @@ const PostTwo = () => {
           authorName={"By: Abdalla Alaar"}
         />
 
+        <div className="pt-8 pb-3">
+          <p className="text-lg pb-6">{text1}</p>
+        </div>
+
+        <PostTwoBody />
         {/* back to home  */}
         <Link
           to="/"
@@ -28,3 +35,5 @@ const PostTwo = () => {
 };
 
 export default PostTwo;
+
+const text1 = `Python continues to be one of the most popular and versatile programming languages in 2024. Whether you're looking to break into the tech industry, enhance your data analysis skills, or automate tasks, learning Python is a smart move. Here’s a step-by-step guide to help you master Python in 2024.`;
