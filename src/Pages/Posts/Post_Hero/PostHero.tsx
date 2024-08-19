@@ -1,6 +1,18 @@
-import postImage from "/src/assets/blog1.webp";
+type PostHeroType = {
+  postImage: string;
+  postTitle: string;
+  postDate: string;
+  authorImage: string;
+  authorName: string;
+};
 
-const PostHero = () => {
+const PostHero: React.FC<PostHeroType> = ({
+  postImage,
+  postTitle,
+  postDate,
+  authorImage,
+  authorName,
+}) => {
   return (
     <>
       <div className="w-full">
@@ -12,13 +24,13 @@ const PostHero = () => {
             className="w-full h-full"
           />
         </div>
-        <h1 className="text-3xl pb-2">HTML TAGS</h1>
-        <p className="text-md pb-6">Aug 21, 2022</p>
+        <h1 className="text-3xl pb-2">{postTitle}</h1>
+        <p className="text-md pb-6">{postDate}</p>
         <div className="flex items-center gap-3">
           <div className="w-14 h-14 bg-blue-500 rounded-full  overflow-hidden">
-            <img src={postImage} alt="" className="w-full h-full" />
+            <img src={authorImage} alt="" className="w-full h-full" />
           </div>
-          <p className="text-lg">By: Oplano James Mulbah</p>
+          <p className="text-lg">{authorName}</p>
         </div>
       </div>
     </>

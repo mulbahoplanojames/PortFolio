@@ -1,12 +1,19 @@
 import { Link } from "react-router-dom";
 import { AiFillHome } from "react-icons/ai";
 import PostHero from "../Post_Hero/PostHero";
+import postImage from "/src/assets/blog1.webp";
 
 const PostOne = () => {
   return (
     <>
       <section className="md:pt-36 md:pb-20 pt-28 pb-16 lg:px-48 md:px-20 px-4 text-white h-fit bg-background">
-        <PostHero />
+        <PostHero
+          postImage={postImage}
+          postTitle={"HTML TAGS"}
+          postDate={"Aug 21, 2022"}
+          authorImage={postImage}
+          authorName={"By: Oplano James Mulbah"}
+        />
 
         {/* back to home  */}
         <Link
