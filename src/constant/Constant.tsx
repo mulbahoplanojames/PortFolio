@@ -108,3 +108,78 @@ export const servicesData: ServicesType[] = [
     icon: targeted,
   },
 ];
+
+//? ------------------------------------------------------------------------------------------------------
+
+import blog1 from "/src/assets/blog1.webp";
+import blog2 from "/src/assets/blog2.webp";
+import blog3 from "/src/assets/blog3.webp";
+import blog4 from "/src/assets/blog4.webp";
+import blog5 from "/src/assets/blog5.webp";
+import blog6 from "/src/assets/blog6.webp";
+
+export type BlogType = {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  date: string;
+  link: string;
+};
+
+export const blogData: BlogType[] = [
+  {
+    id: 1,
+    title: "Web Development",
+    description:
+      "I build websites that serve as powerful marketing tools and bring memorable brand experiences.",
+    image: blog1,
+    date: "Aug 21, 2022",
+    link: "/",
+  },
+  {
+    id: 2,
+    title: "UI/UX Design",
+    description:
+      "Intuitive and visually appealing user interfaces that enhance user experiences.",
+    image: blog2,
+    date: "Aug 21, 2022",
+    link: "/",
+  },
+  {
+    id: 3,
+    title: "Performance Optimization",
+    description:
+      "Boost your website speed and efficiency for better user experiences and engagament.",
+    image: blog3,
+    date: "Aug 21, 2022",
+    link: "/",
+  },
+  {
+    id: 4,
+    title: "Web Development",
+    description:
+      "I build websites that serve as powerful marketing tools and bring memorable brand experiences.",
+    image: blog4,
+    date: "Aug 21, 2022",
+    link: "/",
+  },
+  {
+    id: 5,
+    title: "UI/UX Design",
+    description:
+      "Intuitive and visually appealing user interfaces that enhance user experiences.",
+    image: blog5,
+    date: "Aug 21, 2022",
+    link: "/",
+  },
+  {
+    id: 6,
+    title: "Performance Optimization",
+    description:
+      "Boost your website speed and efficiency for better user experiences and engagament.",
+    image: blog6,
+    date: "Aug 21, 2022",
+    link: "/",
+  },
+];

@@ -1,5 +1,5 @@
 import React from "react";
-import { BackgroundBeams } from "../ui/background-beams"; // Adjust the import path according to your project structure
+import { BackgroundBeams } from "../ui/background-beams";
 
 export const Hero: React.FC = () => {
   return (

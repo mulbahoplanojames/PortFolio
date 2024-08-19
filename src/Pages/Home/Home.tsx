@@ -1,4 +1,5 @@
 import AboutMe from "../../components/About_Me/AboutMe";
+import Blog from "../../components/Blog/Blog";
 import { Hero } from "../../components/Hero/Hero";
 import MyServices from "../../components/My_Services/MyServices";
 import Portfolio from "../../components/Portfolio/Portfolio";
@@ -12,6 +13,7 @@ const Home = () => {
       <MyServices />
       <GlobeDemo />
       <Portfolio />
+      <Blog />
     </>
   );
 };
