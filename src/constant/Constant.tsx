@@ -91,7 +91,7 @@ export const servicesData: ServicesType[] = [
     title: "Web Development",
     description:
       "I build websites that serve as powerful marketing tools and bring memorable brand experiences.",
-    icon: laptop,
+    icon: "/src/assets/laptop-screen.png",
   },
   {
     id: 2,
