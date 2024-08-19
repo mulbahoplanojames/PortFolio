@@ -35,6 +35,7 @@ type ExpertiseType = {
   name: string;
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const exprtise: ExpertiseType[] = [
   {
     id: 1,
@@ -80,9 +81,10 @@ type ServicesType = {
   id: number;
   title: string;
   description: string;
-  icon: string;
+  icon?: string;
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const servicesData: ServicesType[] = [
   {
     id: 1,
