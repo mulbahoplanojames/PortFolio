@@ -1,4 +1,4 @@
-const Portfolio = () => {
+const Portfolio: React.FC = () => {
   return (
     <>
       <div className="w-full md:px-20 px-2 md:py-16 py-8 bg-background text-text">

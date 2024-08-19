@@ -1,6 +1,6 @@
 import { servicesData } from "../../constant/Constant";
 
-const MyServices = () => {
+const MyServices: React.FC = () => {
   return (
     <>
       <div
@@ -17,28 +17,17 @@ const MyServices = () => {
               <div className="w-[24%] h-16 mb-7 overflow-hidden ">
                 <img
                   src={service.icon}
+                  srcSet={`${service.icon} 2x`}
+                  loading="lazy"
                   alt="web development"
                   className="w-full h-full object-contain"
+                  fetchPriority="high"
                 />
               </div>
               <p className="text-xl pb-4">{service.title}</p>
               <p className="text-md">{service.description}</p>
             </div>
           ))}
-          {/* <div className="w-full h-fit bg-blue-400 py-5 px-4 rounded-md">
-            <div className="w-[35%] h-28 bg-red-300 mb-5 overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                alt="web development"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <p className="text-xl pb-4">Web development</p>
-            <p className="text-md">
-              Web development Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Aut beatae nesciunt esse, perferendis error suscipit.
-            </p>
-          </div> */}
         </div>
       </div>
     </>
