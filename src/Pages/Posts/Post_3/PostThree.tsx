@@ -2,6 +2,13 @@ import { Link } from "react-router-dom";
 import { AiFillHome } from "react-icons/ai";
 import PostHero from "../Post_Hero/PostHero";
 import postImage from "/src/assets/blog2.webp";
+import { FaRegClipboard } from "react-icons/fa";
+import { BsCheck } from "react-icons/bs";
+
+// react syntax Highlighter
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { useState } from "react";
 
 const PostThree = () => {
   return (
@@ -54,6 +61,7 @@ const PostThree = () => {
           </ul>
         </div>
 
+        <ExampleOne />
         {/* back to home  */}
         <Link
           to="/"
@@ -67,6 +75,59 @@ const PostThree = () => {
 };
 
 export default PostThree;
+
+const ExampleOne = () => {
+  const [copy, setCopy] = useState(false);
+
+  const codeString = `
+    function calculateArea(width, height) {
+      return width * height;
+  }
+`;
+
+  return (
+    <>
+      <div className="max-w-2xl md:min-w-[30rem] min-w-[20rem] bg-[#3a404d] rounded-md overflow-hidden ">
+        <div className="flex justify-between px-4 text-text text-sm items-center">
+          <p className="">Example code</p>
+          {copy ? (
+            <button className="py-1 inline-flex items-center gap-1">
+              <span className="text-sm my-1">
+                <BsCheck />
+              </span>
+              Copied!
+            </button>
+          ) : (
+            <button
+              className="py-1 inline-flex items-center gap-1"
+              onClick={() => {
+                navigator.clipboard.writeText(codeString);
+                setCopy(true);
+                setTimeout(() => {
+                  setCopy(false);
+                }, 3000);
+              }}
+            >
+              <span className="text-base my-1">
+                <FaRegClipboard />
+              </span>
+              Copy code
+            </button>
+          )}
+        </div>
+        <SyntaxHighlighter
+          language="javascript"
+          style={atomOneDark}
+          customStyle={{ padding: "1rem" }}
+          wrapLongLines={true}
+          // useInlineStyles={false}
+        >
+          {codeString}
+        </SyntaxHighlighter>
+      </div>
+    </>
+  );
+};
 
 //? -------------------------------------------------------------------------------------------------
 const text1 = `  If you're just starting out with JavaScript, you’ve probably heard
