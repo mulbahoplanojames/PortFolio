@@ -2,6 +2,9 @@ import { useEffect } from "react";
 import { Link, Events, scrollSpy } from "react-scroll";
 import { footerlinks } from "../../constant/Constant";
 
+import { FaLinkedin, FaGithubSquare, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
 const Footer = () => {
   useEffect(() => {
     // Registering the 'begin' event and logging it to the console when triggered.
@@ -62,9 +65,49 @@ const Footer = () => {
             </Link>
           ))}
         </div>
+
+        <div className="">
+          <h1 className="text-3xl pb-6 font-bold">Socials</h1>
+          <div className="flex items-center gap-8">
+            {socials.map((social) => (
+              <a href={social.link} key={social.id} target="_blank">
+                {social.icon}
+              </a>
+            ))}
+          </div>
+        </div>
       </section>
     </>
   );
 };
 
 export default Footer;
+
+type SocialsType = {
+  id: number;
+  icon: JSX.Element;
+  link: string;
+};
+
+const socials: SocialsType[] = [
+  {
+    id: 1,
+    icon: <FaLinkedin className="text-3xl" />,
+    link: "https://www.linkedin.com/in/oplano-james-mulbah/",
+  },
+  {
+    id: 2,
+    icon: <FaGithubSquare className="text-3xl" />,
+    link: "https://github.com/mulbahoplanojames",
+  },
+  {
+    id: 3,
+    icon: <FaXTwitter className="text-3xl" />,
+    link: "https://x.com/JamesOplan23726",
+  },
+  {
+    id: 2,
+    icon: <FaInstagram className="text-3xl" />,
+    link: "https://www.instagram.com/oplanojames/",
+  },
+];

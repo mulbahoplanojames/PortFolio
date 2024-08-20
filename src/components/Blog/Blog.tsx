@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { blogData } from "../../constant/Constant";
 import { Cover } from "../ui/cover";
 import image from "/src/assets/blog1.webp";
+import { Link } from "react-router-dom";
 
 const Blog = () => {
   const [items, setItems] = useState(blogData);
@@ -44,10 +45,11 @@ const Blog = () => {
           The <Cover>BlogSpot</Cover>
         </h1>
         <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
-          <a
+          <Link
             rel="noopener noreferrer"
-            href={mainBlog.link}
+            to={mainBlog.link}
             className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 bg-gray-50 hover:scale-105 transition-all duration-300"
+            onClick={() => window.scrollTo(0, 0)}
           >
             <img
               src={mainBlog.image}
@@ -61,14 +63,15 @@ const Blog = () => {
               <span className="text-xs text-gray-600">{mainBlog.date}</span>
               <p>{mainBlog.description}</p>
             </div>
-          </a>
+          </Link>
           <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {items.slice(0, visible).map((blog) => (
-              <a
+              <Link
                 rel="noopener noreferrer"
-                href={blog.link}
+                to={blog.link}
                 className="max-w-sm mx-auto group hover:no-underline focus:no-underline bg-gray-50 hover:scale-105 transition-all duration-300"
                 key={blog.id}
+                onClick={() => window.scrollTo(0, 0)}
               >
                 <img
                   role="presentation"
@@ -82,7 +85,7 @@ const Blog = () => {
                   <span className="text-xs text-gray-600">{blog.date}</span>
                   <p>{blog.description}</p>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
           <div className="flex justify-center">
