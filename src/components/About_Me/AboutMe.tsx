@@ -1,4 +1,11 @@
 import { exprtise } from "../../constant/Constant";
+import { FaRegClipboard } from "react-icons/fa";
+import { BsCheck } from "react-icons/bs";
+
+// react syntax Highlighter
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { useState } from "react";
 
 const AboutMe: React.FC = () => {
   return (
@@ -29,8 +36,9 @@ const AboutMe: React.FC = () => {
           </div>
         </div>
         {/*//? contet two  */}
-        <div className="w-full bg-background text-text md:px-10 px-5 md:py-18 py-10 rounded-md">
-          <code>
+        <div className="w-full bg-background text-text md:px-6 px-3 md:py-7 py-5 rounded-md">
+          <ExampleOne />
+          {/* <code>
             const AboutMe = () =&gt; <br />
             {<code>const [passion, setPassion] = useState("coding")</code>}{" "}
             <br />
@@ -48,7 +56,7 @@ const AboutMe: React.FC = () => {
               <br />I passionate about Front-end React <br />
               <br /> );
             </code>
-          </code>
+          </code> */}
         </div>
       </section>
     </>
@@ -56,3 +64,71 @@ const AboutMe: React.FC = () => {
 };
 
 export default AboutMe;
+
+//? -----------------------------------------------------------------------------------------------
+
+const ExampleOne = () => {
+  const [copy, setCopy] = useState(false);
+
+  const codeString = `
+const AboutMe = () => {
+  const [passion, setPassion] = useState("coding");
+
+     useEffect(() => {
+       setPassion("creating amazing web experiences");
+     }, []);
+
+     return (
+       <>
+           Hello, I am Oplano James Mulbah, 
+
+          I passionate about Front-end React 
+      </>
+     );
+   }
+`;
+
+  return (
+    <>
+      <div className="max-w-2xl md:min-w-[30rem] min-w-[20rem] bg-[#3a404d] rounded-md overflow-hidden ">
+        <div className="flex justify-between px-4 text-text text-sm items-center">
+          <p className="">Passion code</p>
+          {copy ? (
+            <button className="py-1 inline-flex items-center gap-1">
+              <span className="text-sm my-1">
+                <BsCheck />
+              </span>
+              Copied!
+            </button>
+          ) : (
+            <button
+              className="py-1 inline-flex items-center gap-1"
+              onClick={() => {
+                navigator.clipboard.writeText(codeString);
+                setCopy(true);
+                setTimeout(() => {
+                  setCopy(false);
+                }, 3000);
+              }}
+            >
+              <span className="text-base my-1">
+                <FaRegClipboard />
+              </span>
+              Copy code
+            </button>
+          )}
+        </div>
+        <SyntaxHighlighter
+          language="javascript"
+          style={atomOneDark}
+          customStyle={{ padding: "1rem" }}
+          // wrapLongLines={true}
+        >
+          {codeString}
+        </SyntaxHighlighter>
+      </div>
+    </>
+  );
+};
+
+//? -------------------------------------------------------------------------------------------------
