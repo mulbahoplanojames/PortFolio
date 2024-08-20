@@ -4,6 +4,7 @@ import Home from "./Pages/Home/Home";
 import PostOne from "./Pages/Posts/Post_1/PostOne";
 import PostTwo from "./Pages/Posts/Post_2/PostTwo";
 import PostThree from "./Pages/Posts/Post_3/PostThree";
+import PostFour from "./Pages/Posts/Post_4/PostFour";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Route path="/html-tags" element={<PostOne />} />
           <Route path="/python-in-2024" element={<PostTwo />} />
           <Route path="/javascript-functions" element={<PostThree />} />
+          <Route path="/python-libraries" element={<PostFour />} />
         </Route>
       </Routes>
     </>

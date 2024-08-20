@@ -112,7 +112,14 @@ export default PostOne;
 
 //? -------------------------------------------------------------------------------------------------
 
-const htmlTags = [
+type HtmlTagsType = {
+  id: number;
+  name: string;
+  tag: string;
+  text: string;
+};
+
+const htmlTags: HtmlTagsType[] = [
   {
     id: 1,
     name: "Heading",

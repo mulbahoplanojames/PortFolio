@@ -113,7 +113,7 @@ export const servicesData: ServicesType[] = [
 
 import pythonblog from "/src/assets/python5.png";
 import blog2 from "/src/assets/blog2.webp";
-import blog3 from "/src/assets/blog3.webp";
+import blog3 from "/src/assets/python2.png";
 import blog4 from "/src/assets/blog4.webp";
 import blog5 from "/src/assets/blog5.webp";
 import blog6 from "/src/assets/blog6.webp";
@@ -143,17 +143,17 @@ export const blogData: BlogType[] = [
     description:
       "Dive into the world of JavaScript functions with this comprehensive beginner's guide. Learn the basics of creating, calling, and utilizing functions to write cleaner, more efficient code.",
     image: blog2,
-    date: "Aug 19, 2024",
+    date: "Aug 21, 2024",
     link: "/javascript-functions",
   },
   {
     id: 3,
-    title: "Performance Optimization",
+    title: "Top 10 Python Libraries Every Developer Should Know in 2024",
     description:
-      "Boost your website speed and efficiency for better user experiences and engagament.",
+      "Python’s extensive library ecosystem is one of its biggest strengths, enabling developers to quickly build robust applications across various domains.",
     image: blog3,
-    date: "Aug 21, 2022",
-    link: "/",
+    date: "Aug 30, 2024",
+    link: "/python-libraries",
   },
   {
     id: 4,

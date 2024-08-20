@@ -3,7 +3,6 @@ import { AiFillHome } from "react-icons/ai";
 import PostHero from "../Post_Hero/PostHero";
 import postImage from "/src/assets/python5.png";
 import PostTwoBody from "./PostTwoBody";
-import postImage1 from "/src/assets/python2.png";
 
 const PostTwo = () => {
   return (
