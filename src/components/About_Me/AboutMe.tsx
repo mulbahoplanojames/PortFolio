@@ -4,7 +4,7 @@ import { BsCheck } from "react-icons/bs";
 
 // react syntax Highlighter
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { sunburst } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { useState } from "react";
 
 const AboutMe: React.FC = () => {
@@ -38,25 +38,6 @@ const AboutMe: React.FC = () => {
         {/*//? contet two  */}
         <div className="w-full bg-background text-text md:px-6 px-3 md:py-7 py-5 rounded-md">
           <ExampleOne />
-          {/* <code>
-            const AboutMe = () =&gt; <br />
-            {<code>const [passion, setPassion] = useState("coding")</code>}{" "}
-            <br />
-            <br />
-            <br />
-            <code>
-              useEffect(() =&gt; <br /> setPassion("creating amazing web
-              experiences") <br /> , []) <br />
-              <br />
-              <br />
-              return(
-              <br />
-              <br />
-              Hello, I am Oplano James Mulbah, <br />
-              <br />I passionate about Front-end React <br />
-              <br /> );
-            </code>
-          </code> */}
         </div>
       </section>
     </>
@@ -74,9 +55,9 @@ const ExampleOne = () => {
 const AboutMe = () => {
   const [passion, setPassion] = useState("coding");
 
-     useEffect(() => {
-       setPassion("creating amazing web experiences");
-     }, []);
+  useEffect(() => {
+    setPassion("creating amazing web experiences");
+  }, []);
 
      return (
        <>
@@ -120,7 +101,7 @@ const AboutMe = () => {
         </div>
         <SyntaxHighlighter
           language="javascript"
-          style={atomOneDark}
+          style={sunburst}
           customStyle={{ padding: "1rem" }}
           // wrapLongLines={true}
         >
