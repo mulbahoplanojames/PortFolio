@@ -1,3 +1,4 @@
+// Importing the servicesData array from the constant file
 import { servicesData } from "../../constant/Constant";
 
 const MyServices: React.FC = () => {
@@ -12,6 +13,7 @@ const MyServices: React.FC = () => {
         </h1>
 
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-8 gap-y-7">
+          {/* Mapping over the servicesData array and rendering a div element for each service */}
           {servicesData.map((service) => (
             <div className="w-full h-fit bg-[#274351] py-5 px-4 rounded-md text-text">
               <div className="w-[24%] h-16 mb-7 overflow-hidden ">

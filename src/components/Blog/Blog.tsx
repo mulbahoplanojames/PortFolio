@@ -1,23 +1,39 @@
+// Importing useEffect and useState hooks from React
 import { useEffect, useState } from "react";
+
+// Importing blogData constant from Constant file
 import { blogData } from "../../constant/Constant";
+
+// Importing Cover component from ui folder
 import { Cover } from "../ui/cover";
+
+// Importing image from assets folder
 import image from "/src/assets/blog1.webp";
+
+// Importing Link component from react-router-dom
 import { Link } from "react-router-dom";
 
+// Creating Blog functional component
 const Blog = () => {
+  // Initializing items state with blogData and setItems function to update the state
   const [items, setItems] = useState(blogData);
+
+  // Initializing visible state with 3 and setVisible function to update the state
   const [visible, setVisible] = useState(3);
 
-  // Show more items
+  // Function to show more items when button is clicked
   const showMoreItems = () => {
+    // Increasing visible state by 3
     setVisible((prev) => prev + 3);
   };
 
-  // Update items on Mount
+  // Updating items state on mount
   useEffect(() => {
+    // Setting items state to slice of blogData from 0 to visible state
     setItems(blogData.slice(0, visible));
-  }, [visible]);
+  }, [visible]); // Updating items state whenever visible state changes
 
+  // Type for mainBlog object
   type mainBlodType = {
     title: string;
     description: string;
@@ -26,6 +42,7 @@ const Blog = () => {
     link: string;
   };
 
+  // Initializing mainBlog object
   const mainBlog: mainBlodType = {
     title: "HTML TAGS",
     description:
@@ -45,6 +62,7 @@ const Blog = () => {
           The <Cover>BlogSpot</Cover>
         </h1>
         <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
+          {/* Main blog post */}
           <Link
             rel="noopener noreferrer"
             to={mainBlog.link}
@@ -64,6 +82,7 @@ const Blog = () => {
               <p>{mainBlog.description}</p>
             </div>
           </Link>
+          {/* Other blog posts */}
           <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {items.slice(0, visible).map((blog) => (
               <Link
@@ -88,6 +107,7 @@ const Blog = () => {
               </Link>
             ))}
           </div>
+          {/* Button to show more posts */}
           <div className="flex justify-center">
             <button
               type="button"

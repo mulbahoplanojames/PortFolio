@@ -1,12 +1,26 @@
+// Importing the expertise array from the constants file
 import { exprtise } from "../../constant/Constant";
+
+// Importing the copy icon from react icons
 import { FaRegClipboard } from "react-icons/fa";
+
+// Importing the check icon from react icons
 import { BsCheck } from "react-icons/bs";
 
-// react syntax Highlighter
+// Importing the SyntaxHighlighter component from the react-syntax-highlighter library
 import SyntaxHighlighter from "react-syntax-highlighter";
+
+// Importing the sunburst style from the react-syntax-highlighter library
 import { sunburst } from "react-syntax-highlighter/dist/esm/styles/hljs";
+
+// Importing the useState hook from react
 import { useState } from "react";
 
+/**
+ * This AboutMe component renders a section with a title, a paragraph, and a list of expertise
+ * The title is "About Me" and the paragraph is a brief introduction about me
+ * The expertise list is a list of buttons that contain the name of my expertise
+ */
 const AboutMe: React.FC = () => {
   return (
     <>
@@ -28,6 +42,7 @@ const AboutMe: React.FC = () => {
             <p className="text-text pb-8 ">My Expertise Includes:</p>
           </div>
           <div className="w-full flex items-center gap-4 flex-wrap">
+            {/* Mapping over the expertise array and rendering a button for each expertise */}
             {exprtise.map((exp) => (
               <button className="text-primary bg-text py-2 px-6 rounded-full">
                 {exp.name}
@@ -37,6 +52,7 @@ const AboutMe: React.FC = () => {
         </div>
         {/*//? contet two  */}
         <div className="w-full bg-background text-text md:px-6 px-3 md:py-7 py-5 rounded-md">
+          {/* Rendering the ExampleOne component */}
           <ExampleOne />
         </div>
       </section>
@@ -48,7 +64,13 @@ export default AboutMe;
 
 //? -----------------------------------------------------------------------------------------------
 
+/**
+ * The ExampleOne component renders a code block with a copy button
+ * The code block contains a sample code of a React component
+ * The copy button copies the code to the clipboard when clicked
+ */
 const ExampleOne = () => {
+  // State variable to keep track of whether the code has been copied
   const [copy, setCopy] = useState(false);
 
   const codeString = `
@@ -77,6 +99,7 @@ const AboutMe = () => {
           {copy ? (
             <button className="py-1 inline-flex items-center gap-1">
               <span className="text-sm my-1">
+                {/* Rendering the check icon when the code has been copied */}
                 <BsCheck />
               </span>
               Copied!
@@ -85,9 +108,12 @@ const AboutMe = () => {
             <button
               className="py-1 inline-flex items-center gap-1"
               onClick={() => {
+                // Writing the code to the clipboard when the button is clicked
                 navigator.clipboard.writeText(codeString);
+                // Setting the copy state to true when the code has been copied
                 setCopy(true);
                 setTimeout(() => {
+                  // Setting the copy state to false after 3 seconds
                   setCopy(false);
                 }, 3000);
               }}
@@ -103,8 +129,8 @@ const AboutMe = () => {
           language="javascript"
           style={sunburst}
           customStyle={{ padding: "1rem" }}
-          // wrapLongLines={true}
         >
+          {/* Rendering the code string as the code block content */}
           {codeString}
         </SyntaxHighlighter>
       </div>

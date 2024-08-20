@@ -1,33 +1,49 @@
+// Importing React and useEffect hook from React
 import React, { useEffect } from "react";
+
+// Importing BackgroundBeams component from ui folder
 import { BackgroundBeams } from "../ui/background-beams";
+
+// Importing Link component from react-scroll
 import { Link, Events, scrollSpy } from "react-scroll";
 
+// Defining Hero component as a functional component
 export const Hero: React.FC = () => {
+  // useEffect hook is used to perform side effects in function components
+  // It takes a callback function and an optional dependency array
   useEffect(() => {
-    // Registering the 'begin' event and logging it to the console when triggered.
+    // Registering the 'begin' event and logging it to the console when triggered
+    // The callback function takes two parameters, 'to' and 'element'
     const handleBegin = (to: string, element: HTMLElement) => {
       console.log("begin", to, element);
     };
+    // Registering the 'begin' event by calling the register method of Events.scrollEvent
+    // and passing 'handleBegin' as the callback function
     Events.scrollEvent.register("begin", handleBegin);
 
-    // Registering the 'end' event and logging it to the console when triggered.
+    // Registering the 'end' event and logging it to the console when triggered
     const handleEnd = (to: string, element: HTMLElement) => {
       console.log("end", to, element);
     };
+    // Registering the 'end' event by calling the register method of Events.scrollEvent
+    // and passing 'handleEnd' as the callback function
     Events.scrollEvent.register("end", handleEnd);
 
-    // Updating scrollSpy when the component mounts.
+    // Updating scrollSpy when the component mounts
+    // scrollSpy.update() is called to update the scroll spy
     scrollSpy.update();
 
-    // Returning a cleanup function to remove the registered events when the component unmounts.
+    // Returning a cleanup function to remove the registered events when the component unmounts
+    // The cleanup function removes the 'begin' and 'end' events from the Events.scrollEvent
     return () => {
       Events.scrollEvent.remove("begin");
       Events.scrollEvent.remove("end");
     };
   }, []);
 
-  // Function to handle the activation of a link.
+  // Function to handle the activation of a link
   const handleSetActive = (to: string) => {
+    // Logging the 'to' parameter to the console
     console.log(to);
   };
 
@@ -46,6 +62,7 @@ export const Hero: React.FC = () => {
           ready to elevate your web projects.
         </p>
 
+        {/* Link component with properties and onClick event handler */}
         <Link
           to="/contact"
           activeClass="active"
@@ -55,12 +72,14 @@ export const Hero: React.FC = () => {
           duration={500}
           className="relative z-10  mt-4 lg:px-10 px-6 py-3 border-none  shadow-[10px 10px 10px -1px rgba(10,99,169,0.16), -10px,-10px,10px -1px rgba(255,255,255,0.70)] text-sm lg:text-base rounded-3xl hover:opacity-50 bg-white text-primary inline-block"
           onClick={() => {
+            // Calling the handleSetActive function and passing '/contact' as the parameter
             handleSetActive("/contact");
           }}
         >
           Let's Connect
         </Link>
       </div>
+      {/* BackgroundBeams component */}
       <BackgroundBeams />
     </div>
   );

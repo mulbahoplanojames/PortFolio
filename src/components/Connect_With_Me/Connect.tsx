@@ -1,33 +1,59 @@
+// Importing the useState hook from React
 import { useState } from "react";
 
+/**
+ * I created this component to renders a form on the page.
+ * The form allows users to input their name, email, and project description
+ * and submit it to the server.
+ *
+ * The component uses the useState hook to store the result of the form submission.
+ * The result is either a success message or an error message.
+ *
+ * The component also uses the onSubmit event handler to handle the form submission.
+ * The event handler prevents the default form submission behavior and sends a POST request
+ * to the server with the form data.
+ */
 const Connect = () => {
   const [result, setResult] = useState("");
 
+  // Get the API key from the environment variable.
   const API_KEY = import.meta.env.VITE_API_KEY;
 
+  // Define the onSubmit event handler.
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    // Prevent the default form submission behavior.
     event.preventDefault();
+
+    // Set the result to "Sending...".
     setResult("Sending....");
+
+    // Get the form data from the event.
     const formData = new FormData(event.currentTarget);
 
+    // Add the API key to the form data.
     formData.append("access_key", `${API_KEY}`);
 
+    // Send a POST request to the server with the form data.
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       body: formData,
     });
 
+    // Get the JSON response from the server.
     const data: { success: boolean; message: string } = await response.json();
 
+    // If the response is successful, display a success message and reset the form.
     if (data.success) {
       setResult("Message sent Successfully");
       event.currentTarget.reset();
     } else {
+      // If the response is not successful, display an error message.
       console.log("Error", data);
       setResult(data.message);
     }
   };
 
+  // Render the component.
   return (
     <>
       <section

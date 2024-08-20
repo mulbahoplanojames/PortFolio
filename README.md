@@ -1,50 +1,84 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# My Portfolio 
 
-Currently, two official plugins are available:
+This is my portfolio project built using React and Typescript. The project showcases my skills, services and a blog consisting of various posts related to programming and web development.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+**Client:** React, Typescript, TailwindCSS, Aceternity Ui, Vite
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+
+## OverView
+
+This portfolio project, built with React and TypeScript, highlights my skills and services, along with a blog featuring various posts on programming and web development.
+
+## Features
+
+- Service Offerings: Showcase of services provided, including website development for clients.
+
+- Blog: A collection of informative posts on programming and web development topics
+
+- Contact: A contact section for potential clients to reach out for website development services.
+
+- React Router: Efficient client-side routing with React Router.
+
+- Modular Codebase: Clean and maintainable code with components separated by concern.
+
+- Responsive Design: Optimized for various screen sizes.
+
+
+
+
+
+
+
+## Color Reference
+
+| Color             | Hex                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Primary Color | ![#00324b](https://via.placeholder.com/10/00324b?t) #00324b |
+| Background Color | ![#000000](https://via.placeholder.com/10/000000?text=+) #000000 |
+| Text Color | ![#f9f9f9](https://via.placeholder.com/10/f9f9f9?text=+) #f9f9f9 |
+
+
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://link-to-project
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Go to the project directory
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+  cd my-project
 ```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
+
+## Related
+
+Here are some related projects
+
+[Awesome README](https://github.com/mulbahoplanojames/Dev-Tech-Ebook---Blog)
+
+
+## Support
+
+For support, email mulbahjamesoplano@gmail.com.
+

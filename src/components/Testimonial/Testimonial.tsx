@@ -1,31 +1,44 @@
+// Importing the useEffect hook from the React library
 import { useEffect } from "react";
+
+// Importing the Link component from the react-scroll library
 import { Link, Events, scrollSpy } from "react-scroll";
 
 const Testimonial = () => {
   useEffect(() => {
-    // Registering the 'begin' event and logging it to the console when triggered.
+    // Defining the handleBegin function that will be registered as an event handler
+    // for the 'begin' event
     const handleBegin = (to: string, element: HTMLElement) => {
+      // Logging the 'to' and 'element' parameters to the console when the 'begin' event is triggered
       console.log("begin", to, element);
     };
+    // Registering the handleBegin function as an event handler for the 'begin' event
+    // using the Events.scrollEvent.register method
     Events.scrollEvent.register("begin", handleBegin);
 
-    // Registering the 'end' event and logging it to the console when triggered.
+    // Defining the handleEnd function that will be registered as an event handler
+    // for the 'end' event
     const handleEnd = (to: string, element: HTMLElement) => {
+      // Logging the 'to' and 'element' parameters to the console when the 'end' event is triggered
       console.log("end", to, element);
     };
+    // Registering the handleEnd function as an event handler for the 'end' event
+    // using the Events.scrollEvent.register method
     Events.scrollEvent.register("end", handleEnd);
 
-    // Updating scrollSpy when the component mounts.
+    // Updating the scrollSpy when the component mounts
+    // scrollSpy.update() is called to update the scroll spy
     scrollSpy.update();
 
-    // Returning a cleanup function to remove the registered events when the component unmounts.
+    // Returning a cleanup function to remove the registered events when the component unmounts
+    // The cleanup function removes the 'begin' and 'end' events from the Events.scrollEvent
     return () => {
       Events.scrollEvent.remove("begin");
       Events.scrollEvent.remove("end");
     };
   }, []);
 
-  // Function to handle the activation of a link.
+  // Defining the handleSetActive function that will be called when a link is activated
   const handleSetActive = (to: string) => {
     console.log(to);
   };
@@ -48,6 +61,7 @@ const Testimonial = () => {
             </div>
           ))}
         </div>
+        {/* Rendering the Link component for the contact page */}
         <Link
           to="/contact"
           activeClass="active"
@@ -57,6 +71,7 @@ const Testimonial = () => {
           duration={500}
           className="py-3 lg:px-4 px-3 border-none mt-10  shadow-[10px 10px 10px -1px rgba(10,99,169,0.16), -10px,-10px,10px -1px rgba(255,255,255,0.70)] text-base rounded-3xl hover:opacity-50 bg-text text-primary font-semibold capitalize inline-block"
           onClick={() => {
+            // Calling the handleSetActive function when the link is activated
             handleSetActive("/contact");
           }}
         >
@@ -69,10 +84,11 @@ const Testimonial = () => {
 
 export default Testimonial;
 
+// Defining the testimonial array of objects
 const testimonial = [
   {
     id: 1,
-    text: " Oplano's expertise in React transformed our project. Hisdedication and skill set are unmatched!",
+    text: "Oplano's expertise in React transformed our project. His dedication and skill set are unmatched!",
     name: "- Stephen., Data Scientist",
   },
   {
