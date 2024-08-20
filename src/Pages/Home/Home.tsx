@@ -4,6 +4,7 @@ import Connect from "../../components/Connect_With_Me/Connect";
 import { Hero } from "../../components/Hero/Hero";
 import MyServices from "../../components/My_Services/MyServices";
 import Portfolio from "../../components/Portfolio/Portfolio";
+import Testimonial from "../../components/Testimonial/Testimonial";
 import { GlobeDemo } from "../../components/World/World";
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
       <Portfolio />
       <Blog />
       <Connect />
+      <Testimonial />
     </>
   );
 };

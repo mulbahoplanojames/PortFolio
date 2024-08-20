@@ -30,7 +30,10 @@ const Connect = () => {
 
   return (
     <>
-      <section className="md:px-20 px-3 md:py-24 py-14 bg-background grid md:grid-cols-2 grid-cols-1 gap-8 place-items-center text-text">
+      <section
+        className="md:px-20 px-3 md:py-24 py-14 bg-background grid md:grid-cols-2 grid-cols-1 gap-8 place-items-center text-text"
+        id="/contact"
+      >
         <div className="">
           <h2 className="md:text-4xl font-bold text-3xl pb-4">
             Ready to evalate your web presence?
