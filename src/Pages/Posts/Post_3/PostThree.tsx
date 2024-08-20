@@ -62,6 +62,49 @@ const PostThree = () => {
         </div>
 
         <ExampleOne />
+
+        <div className="pt-8 pb-4">
+          <h1 className="text-3xl pb-4">Calling a Function</h1>
+          <p className="text-lg pb-4">
+            Now that you’ve created your function, how do you use it? Simple!
+            You "call" the function by writing its name followed by parentheses,
+            and passing any necessary arguments (the actual values) into those
+            parentheses.
+          </p>
+        </div>
+
+        <ExampleTwo />
+
+        <div className="pt-8 pb-4">
+          <h1 className="text-3xl pb-4">A Few More Examples</h1>
+          <p className="text-lg pb-4">1. Function Without Parameters:</p>
+          <p className="text-lg pb-4">
+            Not all functions need parameters. Here’s a function that simply
+            prints a greeting:
+          </p>
+        </div>
+
+        <ExampleThree />
+
+        <div className="pt-8 pb-4">
+          <p className="text-lg pb-4">2. Function with Multiple Parameters:</p>
+          <p className="text-lg pb-4">
+            You can pass multiple parameters into a function:
+          </p>
+        </div>
+
+        <ExampleFour />
+
+        <div className="pt-8 pb-4">
+          <p className="text-lg pb-4">3. Returning a Value:</p>
+          <p className="text-lg pb-4">
+            Remember, a function can return a value, which can then be used
+            elsewhere in your code:
+          </p>
+        </div>
+
+        <ExampleFive />
+
         {/* back to home  */}
         <Link
           to="/"
@@ -76,6 +119,8 @@ const PostThree = () => {
 
 export default PostThree;
 
+//? -----------------------------------------------------------------------------------------------
+
 const ExampleOne = () => {
   const [copy, setCopy] = useState(false);
 
@@ -83,6 +128,240 @@ const ExampleOne = () => {
     function calculateArea(width, height) {
       return width * height;
   }
+`;
+
+  return (
+    <>
+      <div className="max-w-2xl md:min-w-[30rem] min-w-[20rem] bg-[#3a404d] rounded-md overflow-hidden ">
+        <div className="flex justify-between px-4 text-text text-sm items-center">
+          <p className="">Example code</p>
+          {copy ? (
+            <button className="py-1 inline-flex items-center gap-1">
+              <span className="text-sm my-1">
+                <BsCheck />
+              </span>
+              Copied!
+            </button>
+          ) : (
+            <button
+              className="py-1 inline-flex items-center gap-1"
+              onClick={() => {
+                navigator.clipboard.writeText(codeString);
+                setCopy(true);
+                setTimeout(() => {
+                  setCopy(false);
+                }, 3000);
+              }}
+            >
+              <span className="text-base my-1">
+                <FaRegClipboard />
+              </span>
+              Copy code
+            </button>
+          )}
+        </div>
+        <SyntaxHighlighter
+          language="javascript"
+          style={atomOneDark}
+          customStyle={{ padding: "1rem" }}
+          wrapLongLines={true}
+          // useInlineStyles={false}
+        >
+          {codeString}
+        </SyntaxHighlighter>
+      </div>
+    </>
+  );
+};
+
+//? -------------------------------------------------------------------------------------------------
+
+//? -----------------------------------------------------------------------------------------------
+
+const ExampleTwo = () => {
+  const [copy, setCopy] = useState(false);
+
+  const codeString = `
+  let area = calculateArea(5, 10);
+  console.log(area); // Outputs: 50
+`;
+
+  return (
+    <>
+      <div className="max-w-2xl md:min-w-[30rem] min-w-[20rem] bg-[#3a404d] rounded-md overflow-hidden ">
+        <div className="flex justify-between px-4 text-text text-sm items-center">
+          <p className="">Example code</p>
+          {copy ? (
+            <button className="py-1 inline-flex items-center gap-1">
+              <span className="text-sm my-1">
+                <BsCheck />
+              </span>
+              Copied!
+            </button>
+          ) : (
+            <button
+              className="py-1 inline-flex items-center gap-1"
+              onClick={() => {
+                navigator.clipboard.writeText(codeString);
+                setCopy(true);
+                setTimeout(() => {
+                  setCopy(false);
+                }, 3000);
+              }}
+            >
+              <span className="text-base my-1">
+                <FaRegClipboard />
+              </span>
+              Copy code
+            </button>
+          )}
+        </div>
+        <SyntaxHighlighter
+          language="javascript"
+          style={atomOneDark}
+          customStyle={{ padding: "1rem" }}
+          wrapLongLines={true}
+          // useInlineStyles={false}
+        >
+          {codeString}
+        </SyntaxHighlighter>
+      </div>
+    </>
+  );
+};
+
+//? -------------------------------------------------------------------------------------------------
+
+//? -----------------------------------------------------------------------------------------------
+
+const ExampleThree = () => {
+  const [copy, setCopy] = useState(false);
+
+  const codeString = `
+  function sayHello() {
+      console.log("Hello, world!");
+  }
+
+  sayHello(); // Outputs: Hello, world!
+`;
+
+  return (
+    <>
+      <div className="max-w-2xl md:min-w-[30rem] min-w-[20rem] bg-[#3a404d] rounded-md overflow-hidden ">
+        <div className="flex justify-between px-4 text-text text-sm items-center">
+          <p className="">Example code</p>
+          {copy ? (
+            <button className="py-1 inline-flex items-center gap-1">
+              <span className="text-sm my-1">
+                <BsCheck />
+              </span>
+              Copied!
+            </button>
+          ) : (
+            <button
+              className="py-1 inline-flex items-center gap-1"
+              onClick={() => {
+                navigator.clipboard.writeText(codeString);
+                setCopy(true);
+                setTimeout(() => {
+                  setCopy(false);
+                }, 3000);
+              }}
+            >
+              <span className="text-base my-1">
+                <FaRegClipboard />
+              </span>
+              Copy code
+            </button>
+          )}
+        </div>
+        <SyntaxHighlighter
+          language="javascript"
+          style={atomOneDark}
+          customStyle={{ padding: "1rem" }}
+          wrapLongLines={true}
+          // useInlineStyles={false}
+        >
+          {codeString}
+        </SyntaxHighlighter>
+      </div>
+    </>
+  );
+};
+
+//? -------------------------------------------------------------------------------------------------
+
+//? -----------------------------------------------------------------------------------------------
+
+const ExampleFour = () => {
+  const [copy, setCopy] = useState(false);
+
+  const codeString = `
+  function greetUser(firstName, lastName) {
+      console.log("Hello, " + firstName + " " + lastName + "!");
+  }
+
+  greetUser("John", "Doe"); // Outputs: Hello, John Doe!
+`;
+
+  return (
+    <>
+      <div className="max-w-2xl md:min-w-[30rem] min-w-[20rem] bg-[#3a404d] rounded-md overflow-hidden ">
+        <div className="flex justify-between px-4 text-text text-sm items-center">
+          <p className="">Example code</p>
+          {copy ? (
+            <button className="py-1 inline-flex items-center gap-1">
+              <span className="text-sm my-1">
+                <BsCheck />
+              </span>
+              Copied!
+            </button>
+          ) : (
+            <button
+              className="py-1 inline-flex items-center gap-1"
+              onClick={() => {
+                navigator.clipboard.writeText(codeString);
+                setCopy(true);
+                setTimeout(() => {
+                  setCopy(false);
+                }, 3000);
+              }}
+            >
+              <span className="text-base my-1">
+                <FaRegClipboard />
+              </span>
+              Copy code
+            </button>
+          )}
+        </div>
+        <SyntaxHighlighter
+          language="javascript"
+          style={atomOneDark}
+          customStyle={{ padding: "1rem" }}
+          wrapLongLines={true}
+          // useInlineStyles={false}
+        >
+          {codeString}
+        </SyntaxHighlighter>
+      </div>
+    </>
+  );
+};
+
+//? -----------------------------------------------------------------------------------------------
+
+//? -----------------------------------------------------------------------------------------------
+
+const ExampleFive = () => {
+  const [copy, setCopy] = useState(false);
+
+  const codeString = `
+  function addNumbers(a, b) {
+      return a + b;
+  }
+
+  let sum = addNumbers(3, 7);
+  console.log(sum); // Outputs: 10
 `;
 
   return (
