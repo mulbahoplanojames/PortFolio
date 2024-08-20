@@ -1,7 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BackgroundBeams } from "../ui/background-beams";
+import { Link, Events, scrollSpy } from "react-scroll";
 
 export const Hero: React.FC = () => {
+  useEffect(() => {
+    // Registering the 'begin' event and logging it to the console when triggered.
+    const handleBegin = (to: string, element: HTMLElement) => {
+      console.log("begin", to, element);
+    };
+    Events.scrollEvent.register("begin", handleBegin);
+
+    // Registering the 'end' event and logging it to the console when triggered.
+    const handleEnd = (to: string, element: HTMLElement) => {
+      console.log("end", to, element);
+    };
+    Events.scrollEvent.register("end", handleEnd);
+
+    // Updating scrollSpy when the component mounts.
+    scrollSpy.update();
+
+    // Returning a cleanup function to remove the registered events when the component unmounts.
+    return () => {
+      Events.scrollEvent.remove("begin");
+      Events.scrollEvent.remove("end");
+    };
+  }, []);
+
+  // Function to handle the activation of a link.
+  const handleSetActive = (to: string) => {
+    console.log(to);
+  };
+
   return (
     <div
       className="md:h-[40rem] h-[30rem] w-full bg-neutral-950 relative flex flex-col items-center justify-center antialiased"
@@ -17,9 +46,20 @@ export const Hero: React.FC = () => {
           ready to elevate your web projects.
         </p>
 
-        <button className="relative z-10  mt-4 lg:px-10 px-6 py-3 border-none  shadow-[10px 10px 10px -1px rgba(10,99,169,0.16), -10px,-10px,10px -1px rgba(255,255,255,0.70)] text-sm lg:text-base rounded-3xl hover:opacity-50 bg-white text-primary inline-block">
-          Download Resume
-        </button>
+        <Link
+          to="/contact"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="relative z-10  mt-4 lg:px-10 px-6 py-3 border-none  shadow-[10px 10px 10px -1px rgba(10,99,169,0.16), -10px,-10px,10px -1px rgba(255,255,255,0.70)] text-sm lg:text-base rounded-3xl hover:opacity-50 bg-white text-primary inline-block"
+          onClick={() => {
+            handleSetActive("/contact");
+          }}
+        >
+          Let's Connect
+        </Link>
       </div>
       <BackgroundBeams />
     </div>
