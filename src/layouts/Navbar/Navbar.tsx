@@ -102,7 +102,7 @@ const Navbar = () => {
       {/*//! Responsive menu for smaller devices */}
       {isMenuOpen && (
         <div>
-          <nav className="lg:bottom-auto bg-primary fixed top-16 bottom-0 left-0 right-0 z-50">
+          <nav className="lg:bottom-auto bg-primary fixed top-16 bottom-0 left-0 right-0 z-[9999999] ">
             {/* Close button for the menu */}
             <div
               className="max-lg:block fixed right-0 hidden px-8 py-4 cursor-pointer"
