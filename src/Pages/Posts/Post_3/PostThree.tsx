@@ -105,6 +105,24 @@ const PostThree = () => {
 
         <ExampleFive />
 
+        <div className="pt-8 pb-4">
+          <h1 className="text-3xl pb-4 font-bold">
+            Conclusion: Practice Makes Perfect
+          </h1>
+          <p className="text-lg pb-4">
+            Functions are a fundamental part of JavaScript, and with practice,
+            they’ll become second nature to you. Start by writing simple
+            functions like the ones in this guide. As you get more comfortable,
+            you can create more complex functions to tackle bigger problems.
+          </p>
+          <p className="text-lg pb-4">
+            Remember, the key to mastering functions is to experiment and play
+            around with them. The more you use them, the more powerful your
+            coding skills will become.
+          </p>
+          <p>Happy coding!</p>
+        </div>
+
         {/* back to home  */}
         <Link
           to="/"
