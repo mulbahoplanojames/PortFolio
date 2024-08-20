@@ -3,7 +3,30 @@ type NavLinksType = {
   path: string;
 };
 
-const Navlinks: NavLinksType[] = [
+export const Navlinks: NavLinksType[] = [
+  {
+    label: "Portfolio",
+    path: "/",
+  },
+  {
+    label: "About",
+    path: "/about",
+  },
+  {
+    label: "Services",
+    path: "/services",
+  },
+  {
+    label: "Blog",
+    path: "/blog",
+  },
+  {
+    label: "Contact",
+    path: "/contact",
+  },
+];
+
+export const footerlinks: NavLinksType[] = [
   {
     label: "Portfolio",
     path: "/",
