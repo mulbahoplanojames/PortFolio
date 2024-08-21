@@ -68,7 +68,7 @@ const Navbar = () => {
             <li key={navlink.label} className={`inline-block px-8`}>
               <Link
                 to={navlink.path}
-                className={`font-montserrat text-base leading-normal `}
+                className={`font-montserrat text-base leading-normal cursor-pointer`}
                 activeClass="active"
                 spy={true}
                 smooth={true}
