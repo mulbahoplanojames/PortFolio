@@ -1,23 +1,28 @@
+import React, { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./layouts/Layout";
-import Home from "./Pages/Home/Home";
-import PostOne from "./Pages/Posts/Post_1/PostOne";
-import PostTwo from "./Pages/Posts/Post_2/PostTwo";
-import PostThree from "./Pages/Posts/Post_3/PostThree";
-import PostFour from "./Pages/Posts/Post_4/PostFour";
+import Spinner from "./components/Spinner/Spinner";
+
+const Home = React.lazy(() => import("./Pages/Home/Home"));
+const PostOne = React.lazy(() => import("./Pages/Posts/Post_1/PostOne"));
+const PostTwo = React.lazy(() => import("./Pages/Posts/Post_2/PostTwo"));
+const PostThree = React.lazy(() => import("./Pages/Posts/Post_3/PostThree"));
+const PostFour = React.lazy(() => import("./Pages/Posts/Post_4/PostFour"));
 
 const App = () => {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="/html-tags" element={<PostOne />} />
-          <Route path="/python-in-2024" element={<PostTwo />} />
-          <Route path="/javascript-functions" element={<PostThree />} />
-          <Route path="/python-libraries" element={<PostFour />} />
-        </Route>
-      </Routes>
+      <Suspense fallback={<Spinner />}>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="/html-tags" element={<PostOne />} />
+            <Route path="/python-in-2024" element={<PostTwo />} />
+            <Route path="/javascript-functions" element={<PostThree />} />
+            <Route path="/python-libraries" element={<PostFour />} />
+          </Route>
+        </Routes>
+      </Suspense>
     </>
   );
 };
