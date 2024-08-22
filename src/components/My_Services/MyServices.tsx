@@ -15,7 +15,10 @@ const MyServices: React.FC = () => {
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-8 gap-y-7">
           {/* Mapping over the servicesData array and rendering a div element for each service */}
           {servicesData.map((service) => (
-            <div className="w-full h-fit bg-[#274351] py-5 px-4 rounded-md text-text">
+            <div
+              className="w-full h-fit bg-[#274351] py-5 px-4 rounded-md text-text"
+              key={service.id}
+            >
               <div className="w-[24%] h-16 mb-7 overflow-hidden ">
                 <img
                   src={service.icon}

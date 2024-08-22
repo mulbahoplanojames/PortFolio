@@ -44,7 +44,10 @@ const AboutMe: React.FC = () => {
           <div className="w-full flex items-center gap-4 flex-wrap">
             {/* Mapping over the expertise array and rendering a button for each expertise */}
             {exprtise.map((exp) => (
-              <button className="text-primary bg-text py-2 px-6 rounded-full">
+              <button
+                className="text-primary bg-text py-2 px-6 rounded-full"
+                key={exp.id}
+              >
                 {exp.name}
               </button>
             ))}

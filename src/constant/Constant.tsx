@@ -3,6 +3,7 @@ type NavLinksType = {
   path: string;
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const Navlinks: NavLinksType[] = [
   {
     label: "Portfolio",
@@ -26,6 +27,7 @@ export const Navlinks: NavLinksType[] = [
   },
 ];
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const footerlinks: NavLinksType[] = [
   {
     label: "Portfolio",
@@ -150,6 +152,7 @@ export type BlogType = {
   link: string;
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const blogData: BlogType[] = [
   {
     id: 1,

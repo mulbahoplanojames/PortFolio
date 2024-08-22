@@ -106,7 +106,7 @@ const socials: SocialsType[] = [
     link: "https://x.com/JamesOplan23726",
   },
   {
-    id: 2,
+    id: 4,
     icon: <FaInstagram className="text-3xl" />,
     link: "https://www.instagram.com/oplanojames/",
   },
