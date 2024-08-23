@@ -38,7 +38,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               </h3>
             </a>
             <p className="leading-snug text-base text-text">
-              {projectDescription}
+              {projectDescription.slice(0, 200)} .....
             </p>
           </div>
           {/* technology used */}
