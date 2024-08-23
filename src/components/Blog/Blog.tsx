@@ -109,13 +109,15 @@ const Blog = () => {
           </div>
           {/* Button to show more posts */}
           <div className="flex justify-center">
-            <button
-              type="button"
-              className="px-6 py-3 text-sm rounded-md hover:underline bg-gray-50 text-gray-600"
-              onClick={showMoreItems}
-            >
-              Load more posts...
-            </button>
+            {visible < blogData.length && (
+              <button
+                type="button"
+                className="px-6 py-3 text-sm rounded-md hover:underline bg-gray-50 text-gray-600"
+                onClick={showMoreItems}
+              >
+                Load more posts...
+              </button>
+            )}
           </div>
         </div>
       </section>

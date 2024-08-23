@@ -44,13 +44,15 @@ const Portfolio: React.FC = () => {
 
         {/* Button to show more posts */}
         <div className="flex justify-center mt-7">
-          <button
-            type="button"
-            className="px-6 py-3 text-sm rounded-md hover:underline bg-gray-50 text-gray-600"
-            onClick={showMoreItems}
-          >
-            Preview More Works...
-          </button>
+          {PROJECTS.length > visible && (
+            <button
+              type="button"
+              className="px-6 py-3 text-sm rounded-md hover:underline bg-gray-50 text-gray-600"
+              onClick={showMoreItems}
+            >
+              Preview More Works...
+            </button>
+          )}
         </div>
       </div>
     </>
