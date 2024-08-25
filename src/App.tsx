@@ -9,10 +9,14 @@ const PostTwo = React.lazy(() => import("./Pages/Posts/Post_2/PostTwo"));
 const PostThree = React.lazy(() => import("./Pages/Posts/Post_3/PostThree"));
 const PostFour = React.lazy(() => import("./Pages/Posts/Post_4/PostFour"));
 
+// Vercel analytics
+import { Analytics } from "@vercel/analytics/react";
+
 const App = () => {
   return (
     <>
       <Suspense fallback={<Spinner />}>
+        <Analytics />
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
