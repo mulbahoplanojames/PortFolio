@@ -36,7 +36,7 @@ const Footer = () => {
 
   return (
     <>
-      <section className="md:px-28 px-5 md:py-20 py-14 bg-background text-text grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
+      <section className="md:px-28 px-5 md:py-20 py-14 bg-background text-text grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 border-t-2">
         <div className="w-full h-fit">
           <h1 className="text-3xl pb-3 font-bold">Contact Me</h1>
           <p className="pb-3 text-lg">(+250) 791 - 676 -207</p>

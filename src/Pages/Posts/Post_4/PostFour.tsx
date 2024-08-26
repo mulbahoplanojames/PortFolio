@@ -12,9 +12,9 @@ const PostFour = () => {
           postTitle={
             "Top 10 Python Libraries Every Developer Should Know in 2024"
           }
-          postDate={"Aug 30, 2024"}
+          postDate={"Aug 22, 2024"}
           authorImage={postImage}
-          authorName={"By:Abdalla Alaar"}
+          authorName={"By: Abdalla Alaar"}
         />
 
         <div className="pt-8 pb-4">

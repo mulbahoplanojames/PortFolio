@@ -26,7 +26,6 @@ const MyServices: React.FC = () => {
                   loading="lazy"
                   alt="web development"
                   className="w-full h-full object-contain"
-                  fetchPriority="high"
                 />
               </div>
               <p className="text-xl pb-4">{service.title}</p>

@@ -11,7 +11,7 @@ const PostTwo = () => {
         <PostHero
           postImage={postImage}
           postTitle={"How to Learn Python in 2024: A Comprehensive Guide"}
-          postDate={"Aug 21, 2024"}
+          postDate={"Aug 22, 2024"}
           authorImage={postImage}
           authorName={"By: Abdalla Alaar"}
         />

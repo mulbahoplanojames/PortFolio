@@ -139,9 +139,10 @@ export const servicesData: ServicesType[] = [
 import pythonblog from "/src/assets/python5.png";
 import blog2 from "/src/assets/blog2.webp";
 import blog3 from "/src/assets/python2.png";
-import blog4 from "/src/assets/blog4.webp";
+// import blog4 from "/src/assets/blog4.webp";
 import blog5 from "/src/assets/blog5.webp";
 import blog6 from "/src/assets/blog6.webp";
+import blog7 from "/src/assets/frontend.avif";
 
 export type BlogType = {
   id: number;
@@ -183,12 +184,12 @@ export const blogData: BlogType[] = [
   },
   {
     id: 4,
-    title: "Web Development",
+    title: "5 Steps to Learn Front-End Development 🚀",
     description:
-      "I build websites that serve as powerful marketing tools and bring memorable brand experiences.",
-    image: blog4,
+      "Starting your journey in front-end development can be both exciting and overwhelming. To make it easier, here’s a simple guide to the key steps you should follow.",
+    image: blog7,
     date: "Aug 21, 2022",
-    link: "/",
+    link: "/five-steps-to-learn-front-end-development",
   },
   {
     id: 5,

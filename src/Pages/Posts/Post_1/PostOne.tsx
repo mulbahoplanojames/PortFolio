@@ -10,7 +10,7 @@ const PostOne = () => {
         <PostHero
           postImage={postImage}
           postTitle={"HTML TAGS"}
-          postDate={"Aug 21, 2022"}
+          postDate={"Aug 21, 2024"}
           authorImage={postImage}
           authorName={"By: Oplano James Mulbah"}
         />

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import PROJECTS from "../../data/Date";
+import PROJECTS from "../../data/Data";
+
 import ProjectCard from "../Project_Card/ProjectCard";
 
 const Portfolio: React.FC = () => {

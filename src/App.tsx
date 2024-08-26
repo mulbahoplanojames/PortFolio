@@ -11,6 +11,7 @@ const PostFour = React.lazy(() => import("./Pages/Posts/Post_4/PostFour"));
 
 // Vercel analytics
 import { Analytics } from "@vercel/analytics/react";
+import PostFive from "./Pages/Posts/Post_5/PostFive";
 
 const App = () => {
   return (
@@ -24,6 +25,10 @@ const App = () => {
             <Route path="/python-in-2024" element={<PostTwo />} />
             <Route path="/javascript-functions" element={<PostThree />} />
             <Route path="/python-libraries" element={<PostFour />} />
+            <Route
+              path="/five-steps-to-learn-front-end-development"
+              element={<PostFive />}
+            />
           </Route>
         </Routes>
       </Suspense>
