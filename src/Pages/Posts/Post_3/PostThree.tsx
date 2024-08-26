@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { AiFillHome } from "react-icons/ai";
 import PostHero from "../Post_Hero/PostHero";
 import postImage from "/src/assets/blog2.webp";
+import authorAvatar from "/src/assets/oplano.jpg";
+
 import { FaRegClipboard } from "react-icons/fa";
 import { BsCheck } from "react-icons/bs";
 
@@ -20,7 +22,7 @@ const PostThree = () => {
             "Getting Started with JavaScript Functions: A Beginner's Guide"
           }
           postDate={"Aug 21, 2024"}
-          authorImage={postImage}
+          authorImage={authorAvatar}
           authorName={"By:Oplano James Mulbah"}
         />
 

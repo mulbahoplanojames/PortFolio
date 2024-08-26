@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { AiFillHome } from "react-icons/ai";
 import PostHero from "../Post_Hero/PostHero";
 import postImage from "/src/assets/python5.png";
+import authorAvatar from "/src/assets/abdo.jpg";
+
 import PostTwoBody from "./PostTwoBody";
 
 const PostTwo = () => {
@@ -12,8 +14,8 @@ const PostTwo = () => {
           postImage={postImage}
           postTitle={"How to Learn Python in 2024: A Comprehensive Guide"}
           postDate={"Aug 22, 2024"}
-          authorImage={postImage}
-          authorName={"By: Abdalla Alaar"}
+          authorImage={authorAvatar}
+          authorName={"By: Abdalla Aleer"}
         />
 
         <div className="pt-8 pb-3">

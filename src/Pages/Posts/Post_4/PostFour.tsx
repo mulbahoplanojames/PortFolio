@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { AiFillHome } from "react-icons/ai";
 import PostHero from "../Post_Hero/PostHero";
 import postImage from "/src/assets/python2.png";
+import authorAvatar from "/src/assets/abdo.jpg";
 
 const PostFour = () => {
   return (
@@ -13,8 +14,8 @@ const PostFour = () => {
             "Top 10 Python Libraries Every Developer Should Know in 2024"
           }
           postDate={"Aug 22, 2024"}
-          authorImage={postImage}
-          authorName={"By: Abdalla Alaar"}
+          authorImage={authorAvatar}
+          authorName={"By: Abdalla Aleer"}
         />
 
         <div className="pt-8 pb-4">

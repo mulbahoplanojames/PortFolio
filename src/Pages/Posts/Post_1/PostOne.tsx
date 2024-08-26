@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { AiFillHome } from "react-icons/ai";
 import PostHero from "../Post_Hero/PostHero";
 import postImage from "/src/assets/blog1.webp";
+import authorAvatar from "/src/assets/oplano.jpg";
 
 const PostOne = () => {
   return (
@@ -11,7 +12,7 @@ const PostOne = () => {
           postImage={postImage}
           postTitle={"HTML TAGS"}
           postDate={"Aug 21, 2024"}
-          authorImage={postImage}
+          authorImage={authorAvatar}
           authorName={"By: Oplano James Mulbah"}
         />
 
