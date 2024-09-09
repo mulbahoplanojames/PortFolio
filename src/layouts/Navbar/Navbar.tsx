@@ -140,12 +140,13 @@ const Navbar = () => {
                   </Link>
                 </li>
               ))}
-              <Link
-                to="Download_Resume.pdf"
-                className="py-2 lg:px-4 px-3 border-none  shadow-[10px 10px 10px -1px rgba(10,99,169,0.16), -10px,-10px,10px -1px rgba(255,255,255,0.70)] text-sm lg:text-base rounded-3xl hover:opacity-50 bg-white text-primary"
+              <a
+                href="/src/PDF/Oplano James Mulbah Resume.pdf"
+                className="py-2 lg:px-4 px-3 border-none  shadow-[10px 10px 10px -1px rgba(10,99,169,0.16), -10px,-10px,10px -1px rgba(255,255,255,0.70)] text-sm lg:text-base rounded-3xl hover:opacity-50 bg-primary text-white"
+                download
               >
                 Download Resume
-              </Link>
+              </a>
             </ul>
           </nav>
         </div>
