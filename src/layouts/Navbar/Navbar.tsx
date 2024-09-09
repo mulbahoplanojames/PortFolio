@@ -82,13 +82,14 @@ const Navbar = () => {
           ))}
         </ul>
         {/*//! Contact Us button */}
-        <div className="lg:gap-x-6 gap-x-4 flex justify-center items-center">
-          <Link
-            to="Download_Resume.pdf"
+        <div className="lg:gap-x-6 gap-x-4 flex items-center justify-center">
+          <a
+            href="/src/PDF/Oplano James Mulbah Resume.pdf"
             className="py-2 lg:px-4 px-3 border-none  shadow-[10px 10px 10px -1px rgba(10,99,169,0.16), -10px,-10px,10px -1px rgba(255,255,255,0.70)] text-sm lg:text-base rounded-3xl hover:opacity-50 bg-primary text-white"
+            download
           >
             Download Resume
-          </Link>
+          </a>
           {/*//! Menu toggle button for smaller devices */}
           <TbMenu2
             className={`max-lg:block hidden text-3xl cursor-pointer `}

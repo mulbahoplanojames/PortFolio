@@ -8,7 +8,7 @@ const Portfolio: React.FC = () => {
   const [visible, setVisible] = useState(3);
 
   const showMoreItems = () => {
-    setVisible((prev) => prev + 1);
+    setVisible((prev) => prev + 3);
   };
 
   // Updating items state on mount
@@ -19,15 +19,15 @@ const Portfolio: React.FC = () => {
 
   return (
     <>
-      <div className="w-full md:px-20 px-2 md:py-16 py-8 bg-background text-text">
-        <h1 className="md:text-4xl text-3xl text-center font-semibold pb-3">
+      <div className="md:px-20 md:py-16 bg-background text-text w-full px-2 py-8">
+        <h1 className="md:text-4xl pb-3 text-3xl font-semibold text-center">
           Recent Works
         </h1>
-        <p className="text-center text-lg pb-10">
+        <p className="pb-10 text-lg text-center">
           Showcasing my recent projects and achievements
         </p>
 
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-8 gap-y-8 items-center justify-center">
+        <div className="lg:grid-cols-3 md:grid-cols-2 md:gap-8 gap-y-8 grid items-center justify-center grid-cols-1">
           {items.slice(0, visible).map((project) => {
             return (
               <ProjectCard
@@ -44,11 +44,11 @@ const Portfolio: React.FC = () => {
         </div>
 
         {/* Button to show more posts */}
-        <div className="flex justify-center mt-7">
+        <div className="mt-7 flex justify-center">
           {PROJECTS.length > visible && (
             <button
               type="button"
-              className="px-6 py-3 text-sm rounded-md hover:underline bg-gray-50 text-gray-600"
+              className="hover:underline bg-gray-50 px-6 py-3 text-sm text-gray-600 rounded-md"
               onClick={showMoreItems}
             >
               Preview More Works...
