@@ -5,6 +5,7 @@ import reality from "/src/assets/reality.png";
 import Naa_kai_img from "/src/assets/naa_kaai.png";
 import kids_math from "/src/assets/kids_math.png";
 import bina from "/src/assets/bina.png";
+import weedorUI from "/src/assets/weedorUI.png";
 
 type ProjectType = {
   projectID: number;
@@ -17,6 +18,16 @@ type ProjectType = {
 };
 
 const PROJECTS: ProjectType[] = [
+  {
+    projectID: 8,
+    image: weedorUI,
+    projectTitle: "WeedorUI Components Library",
+    projectDescription:
+      "I developed this UI Components Library to streamline the process of building reusable components for my projects, significantly reducing development time. By utilizing this library, developers can adhere to the DRY (Don't Repeat Yourself) principle, promoting efficiency and code reusability.",
+    technologiesUsed: ["HTML", "Tailwind CSS", "Typescript", "MDX"],
+    liveDemo: "https://weedorui.vercel.app/",
+    code: "https://github.com/mulbahoplanojames/WeedorUI",
+  },
   {
     projectID: 7,
     image: kids_math,
