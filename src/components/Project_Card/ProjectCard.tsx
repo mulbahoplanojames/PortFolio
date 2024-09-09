@@ -22,7 +22,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   return (
     <>
-      <Link to={liveDemo}>
+      <Link to={liveDemo} target="_blank">
         <div className="md:p-4 bg-background border-spacing-1 border-primary text-text group max-w-lg p-3 border rounded-md shadow-md">
           <div className="space-y-4">
             <div className="space-y-2">
