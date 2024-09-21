@@ -19,7 +19,10 @@ const Portfolio: React.FC = () => {
 
   return (
     <>
-      <div className="md:px-20 md:py-16 bg-background text-text w-full px-2 py-8">
+      <div
+        className="md:px-20 md:py-16 bg-background text-text w-full px-2 py-8"
+        id="/Portfolio"
+      >
         <h1 className="md:text-4xl pb-3 text-3xl font-semibold text-center">
           Recent Works
         </h1>

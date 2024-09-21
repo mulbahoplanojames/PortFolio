@@ -9,6 +9,8 @@ import logo from "/src/assets/logo.png";
 
 import { FaArrowCircleUp } from "react-icons/fa";
 
+import RESUME from "/src/PDF/Oplano_James_Mulbah_Resume.pdf";
+
 const Navbar = () => {
   // State variable to keep track of whether the menu is open or not.
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -84,9 +86,9 @@ const Navbar = () => {
         {/*//! Contact Us button */}
         <div className="lg:gap-x-6 gap-x-4 flex items-center justify-center">
           <a
-            href="/src/PDF/Oplano James Mulbah Resume.pdf"
+            href={RESUME}
             className="py-2 lg:px-4 px-3 border-none  shadow-[10px 10px 10px -1px rgba(10,99,169,0.16), -10px,-10px,10px -1px rgba(255,255,255,0.70)] text-sm lg:text-base rounded-3xl hover:opacity-50 bg-primary text-white"
-            download
+            download="Oplano James Mulbah Resume"
           >
             Download Resume
           </a>
@@ -141,9 +143,9 @@ const Navbar = () => {
                 </li>
               ))}
               <a
-                href="/src/PDF/Oplano James Mulbah Resume.pdf"
-                className="py-2 lg:px-4 px-3 border-none  shadow-[10px 10px 10px -1px rgba(10,99,169,0.16), -10px,-10px,10px -1px rgba(255,255,255,0.70)] text-sm lg:text-base rounded-3xl hover:opacity-50 bg-primary text-white"
-                download
+                href={RESUME}
+                className="py-2 lg:px-4 px-3 border-none  shadow-[10px 10px 10px -1px rgba(10,99,169,0.16), -10px,-10px,10px -1px rgba(255,255,255,0.70)] text-sm lg:text-base rounded-xl hover:opacity-50 bg-white text-primary"
+                download="Oplano James Mulbah Resume"
               >
                 Download Resume
               </a>

@@ -7,7 +7,7 @@ type NavLinksType = {
 export const Navlinks: NavLinksType[] = [
   {
     label: "Portfolio",
-    path: "/",
+    path: "/Portfolio",
   },
   {
     label: "About",
@@ -31,7 +31,7 @@ export const Navlinks: NavLinksType[] = [
 export const footerlinks: NavLinksType[] = [
   {
     label: "Portfolio",
-    path: "/",
+    path: "/Portfolio",
   },
   {
     label: "About",
