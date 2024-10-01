@@ -1,7 +1,7 @@
 // images
 import DevTechImg from "/src/assets/Dev!Tech_Blog.png";
 import Doecas_school from "/src/assets/borcas_school.png";
-import reality from "/src/assets/reality.png";
+import techspace from "/src/assets/techspace.png";
 import Naa_kai_img from "/src/assets/naa_kaai.png";
 import kids_math from "/src/assets/kids_math.png";
 import bina from "/src/assets/bina.png";
@@ -19,7 +19,7 @@ type ProjectType = {
 
 const PROJECTS: ProjectType[] = [
   {
-    projectID: 8,
+    projectID: 1,
     image: weedorUI,
     projectTitle: "WeedorUI Components Library",
     projectDescription:
@@ -29,7 +29,17 @@ const PROJECTS: ProjectType[] = [
     code: "https://github.com/mulbahoplanojames/WeedorUI",
   },
   {
-    projectID: 7,
+    projectID: 2,
+    image: techspace,
+    projectTitle: "TechSpace StartUp Company",
+    projectDescription:
+      "I am a founder of TechSpace which is a startup for creating customized websites and applications tailored to meet your specific needs. Our dedicated team of developers and designers collaborates closely with clients to transform ideas into engaging digital experiences. Let us partner with you to bring your vision to life and elevate your online presence!",
+    technologiesUsed: ["React", "Tailwind CSS", "Typescript"],
+    liveDemo: "https://techspace-one.vercel.app/",
+    code: "",
+  },
+  {
+    projectID: 3,
     image: kids_math,
     projectTitle: "Math 4 Kids, a math game for Kids",
     projectDescription:
@@ -39,7 +49,7 @@ const PROJECTS: ProjectType[] = [
     code: "https://github.com/mulbahoplanojames/Math-4-Kids",
   },
   {
-    projectID: 1,
+    projectID: 4,
     image: DevTechImg,
     projectTitle: "Dev!Tech Blog and Ebooks",
     projectDescription:
@@ -48,8 +58,9 @@ const PROJECTS: ProjectType[] = [
     liveDemo: "https://devtech-ebook-blog.netlify.app/",
     code: "https://github.com/mulbahoplanojames/Dev-Tech-Ebook---Blog",
   },
+
   {
-    projectID: 2,
+    projectID: 5,
     image: Naa_kai_img,
     projectTitle: "Naa-Kaai-Kai-Enterprise",
     projectDescription:
@@ -59,7 +70,7 @@ const PROJECTS: ProjectType[] = [
     code: "https://github.com/mulbahoplanojames/SteveCom",
   },
   {
-    projectID: 3,
+    projectID: 6,
     image: Doecas_school,
     projectTitle: "Dorcas Christain School",
     projectDescription:
@@ -69,7 +80,7 @@ const PROJECTS: ProjectType[] = [
     code: "https://github.com/mulbahoplanojames/Dorcas_Christain_School",
   },
   {
-    projectID: 8,
+    projectID: 7,
     image: bina,
     projectTitle: "Binage!9 web Application",
     projectDescription:
@@ -77,16 +88,6 @@ const PROJECTS: ProjectType[] = [
     technologiesUsed: ["React", "Css Modules", "React Styled Components"],
     liveDemo: "https://binage9.netlify.app/",
     code: "https://github.com/mulbahoplanojames/Binage-9",
-  },
-  {
-    projectID: 4,
-    image: reality,
-    projectTitle: "Nonimation Reality TV",
-    projectDescription:
-      "Nonimation Reality TV is an interactive web platform that lets users explore and engage with the world of reality television, offering features like voting for contestants and staying updated on the latest shows. The site is designed with a sleek, user-friendly interface that ensures a seamless experience across all devices.",
-    technologiesUsed: ["React", "Tailwind CSS", "JavaScript"],
-    liveDemo: "https://nonimation-realitytv.netlify.app/",
-    code: "",
   },
 ];
 

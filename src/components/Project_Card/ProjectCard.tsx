@@ -29,7 +29,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               <img
                 src={image}
                 alt=""
-                className="object-scale md:h-64 block w-full h-56 bg-gray-500 rounded-md"
+                className="object-scale md:h-72 block w-full h-56 bg-gray-500 rounded-md"
               />
             </div>
             <div className="space-y-3">

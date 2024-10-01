@@ -36,16 +36,16 @@ const Footer = () => {
 
   return (
     <>
-      <section className="md:px-28 px-5 md:py-20 py-14 bg-background text-text grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 border-t-2">
-        <div className="w-full h-fit">
-          <h1 className="text-3xl pb-3 font-bold">Contact Me</h1>
+      <section className="md:px-28 md:py-20 py-14 bg-background text-text lg:grid-cols-3 md:grid-cols-2 grid grid-cols-1 gap-10 px-5 border-t-2">
+        <div className="h-fit w-full">
+          <h1 className="pb-3 text-3xl font-bold">Contact Me</h1>
           <p className="pb-3 text-lg">(+250) 791 - 676 -207</p>
           <p className="pb-3 text-lg">mulbahjamesoplano@gmail.com</p>
           <p className="pb-3 text-lg">Gisozo, Kigali, Rwanda</p>
         </div>
 
-        <div className="w-full h-fit">
-          <h1 className="text-3xl pb-3 font-bold">Services</h1>
+        <div className="h-fit w-full">
+          <h1 className="pb-3 text-3xl font-bold">Services</h1>
 
           {footerlinks.map((link) => (
             <Link
@@ -56,7 +56,7 @@ const Footer = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              className="pb-3 text-lg block"
+              className="block pb-3 text-lg cursor-pointer"
               onClick={() => {
                 handleSetActive("/");
               }}
@@ -67,7 +67,7 @@ const Footer = () => {
         </div>
 
         <div className="">
-          <h1 className="text-3xl pb-6 font-bold">Socials</h1>
+          <h1 className="pb-6 text-3xl font-bold">Socials</h1>
           <div className="flex items-center gap-8">
             {socials.map((social) => (
               <a href={social.link} key={social.id} target="_blank">
