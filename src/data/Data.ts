@@ -4,7 +4,7 @@ import Doecas_school from "/src/assets/borcas_school.png";
 import techspace from "/src/assets/techspace.png";
 import Naa_kai_img from "/src/assets/naa_kaai.png";
 import kids_math from "/src/assets/kids_math.png";
-import bina from "/src/assets/bina.png";
+import wilfix from "/src/assets/wlifix.png";
 import weedorUI from "/src/assets/weedorUI.png";
 
 type ProjectType = {
@@ -40,6 +40,16 @@ const PROJECTS: ProjectType[] = [
   },
   {
     projectID: 3,
+    image: wilfix,
+    projectTitle: "Movie App",
+    projectDescription:
+      "I Created this Movie App utilizing React, Tailwind CSS, Next.js, and TypeScript, designed to deepen understanding of integrating and handling data from external APIs. This project combines modern front-end frameworks and styling tools to deliver a dynamic user experience, while offering a hands-on approach to working with real-time data.",
+    technologiesUsed: ["Next JS", "Tailwind CSS", "Shadcn Ui"],
+    liveDemo: "https://wilfixmovieapp.vercel.app/",
+    code: "https://github.com/mulbahoplanojames/Binage-9",
+  },
+  {
+    projectID: 4,
     image: kids_math,
     projectTitle: "Math 4 Kids, a math game for Kids",
     projectDescription:
@@ -49,7 +59,7 @@ const PROJECTS: ProjectType[] = [
     code: "https://github.com/mulbahoplanojames/Math-4-Kids",
   },
   {
-    projectID: 4,
+    projectID: 5,
     image: DevTechImg,
     projectTitle: "Dev!Tech Blog and Ebooks",
     projectDescription:
@@ -60,7 +70,7 @@ const PROJECTS: ProjectType[] = [
   },
 
   {
-    projectID: 5,
+    projectID: 6,
     image: Naa_kai_img,
     projectTitle: "Naa-Kaai-Kai-Enterprise",
     projectDescription:
@@ -70,7 +80,7 @@ const PROJECTS: ProjectType[] = [
     code: "https://github.com/mulbahoplanojames/SteveCom",
   },
   {
-    projectID: 6,
+    projectID: 7,
     image: Doecas_school,
     projectTitle: "Dorcas Christain School",
     projectDescription:
@@ -78,16 +88,6 @@ const PROJECTS: ProjectType[] = [
     technologiesUsed: ["React", "Tailwind CSS", "JavaScript"],
     liveDemo: "https://dorcas-christain-school.vercel.app/",
     code: "https://github.com/mulbahoplanojames/Dorcas_Christain_School",
-  },
-  {
-    projectID: 7,
-    image: bina,
-    projectTitle: "Binage!9 web Application",
-    projectDescription:
-      "This is a Front-end project for a web app that for a virtual company that is involve in developing web site and web applications for clients for a reasonable price and their work is done effectively",
-    technologiesUsed: ["React", "Css Modules", "React Styled Components"],
-    liveDemo: "https://binage9.netlify.app/",
-    code: "https://github.com/mulbahoplanojames/Binage-9",
   },
 ];
 
