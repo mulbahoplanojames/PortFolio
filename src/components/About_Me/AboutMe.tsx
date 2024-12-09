@@ -1,26 +1,15 @@
-// Importing the expertise array from the constants file
 import { exprtise } from "../../constant/Constant";
 
-// Importing the copy icon from react icons
 import { FaRegClipboard } from "react-icons/fa";
 
-// Importing the check icon from react icons
 import { BsCheck } from "react-icons/bs";
 
-// Importing the SyntaxHighlighter component from the react-syntax-highlighter library
 import SyntaxHighlighter from "react-syntax-highlighter";
 
-// Importing the sunburst style from the react-syntax-highlighter library
 import { sunburst } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
-// Importing the useState hook from react
 import { useState } from "react";
 
-/**
- * This AboutMe component renders a section with a title, a paragraph, and a list of expertise
- * The title is "About Me" and the paragraph is a brief introduction about me
- * The expertise list is a list of buttons that contain the name of my expertise
- */
 const AboutMe: React.FC = () => {
   return (
     <>
@@ -55,7 +44,6 @@ const AboutMe: React.FC = () => {
         </div>
         {/*//? contet two  */}
         <div className="w-full bg-background text-text md:px-6 px-3 md:py-7 py-5 rounded-md">
-          {/* Rendering the ExampleOne component */}
           <ExampleOne />
         </div>
       </section>
