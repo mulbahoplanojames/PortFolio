@@ -16,29 +16,24 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    // Registering the 'begin' event and logging it to the console when triggered.
     const handleBegin = (to: string, element: HTMLElement) => {
       console.log("begin", to, element);
     };
     Events.scrollEvent.register("begin", handleBegin);
 
-    // Registering the 'end' event and logging it to the console when triggered.
     const handleEnd = (to: string, element: HTMLElement) => {
       console.log("end", to, element);
     };
     Events.scrollEvent.register("end", handleEnd);
 
-    // Updating scrollSpy when the component mounts.
     scrollSpy.update();
 
-    // Returning a cleanup function to remove the registered events when the component unmounts.
     return () => {
       Events.scrollEvent.remove("begin");
       Events.scrollEvent.remove("end");
     };
   }, []);
 
-  // Defining functions to perform different types of scrolling.
   const scrollToTop = () => {
     scroll.scrollToTop();
   };
@@ -53,7 +48,6 @@ const Navbar = () => {
       <nav
         className={` flex justify-between items-center py-4 md:px-10 px-4 fixed z-50 w-full top-0 bg-gradient-to-r from-primary via-background to-background text-white`}
       >
-        {/* Link to the home page */}
         <Link
           to="/"
           className={`text-2xl font-bold flex justify-center items-center gap-2 `}
