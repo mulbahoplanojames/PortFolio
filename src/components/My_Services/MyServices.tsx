@@ -1,4 +1,3 @@
-// Importing the servicesData array from the constant file
 import { servicesData } from "../../constant/Constant";
 
 const MyServices: React.FC = () => {

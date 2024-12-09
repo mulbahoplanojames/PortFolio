@@ -11,7 +11,6 @@ const Portfolio: React.FC = () => {
     setVisible((prev) => prev + 3);
   };
 
-  // Updating items state on mount
   useEffect(() => {
     // Setting items state to slice of blogData from 0 to visible state
     setItems(PROJECTS.slice(0, visible));
